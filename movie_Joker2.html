@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joker 2: Folie À Deux</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Ảnh nền -->
+    <div class="background">
+      <img src="./assets/img/joker2landscape.jpg" alt="Joker 2 Background" />
+    </div>
+
+    <!-- Lớp phủ làm tối nền -->
+    <div class="overlay"></div>
+    <div class="movie-container">
+      <div class="poster">
+        <img src="./assets/img/joker2.jpg" alt="Joker 2: Folie À Deux" />
+      </div>
+
+      <div class="movie-info">
+        <div class="age-tag" style="background-color: #d32f2f">18+</div>
+        <h1 class="movie-title">Joker: Điên Có Đôi</h1>
+        <p class="movie-meta">2024 • 138 phút</p>
+
+        <div class="rating">
+          <span class="icon">🍿</span>
+          <span>4.9/5 từ 478 đánh giá</span>
+        </div>
+
+        <p class="tagline">
+          Quốc gia: Mỹ <br />
+          Nhà sản xuất: Warner Bros, DC Entertainment <br />
+          Thể loại: Tâm lý, nhạc kịch <br />
+          Đạo diễn: Todd Phillips Diễn viên: Joaquin Phoenix, Lady Gaga, Zazie
+          Beet
+        </p>
+
+        <div class="movie-desc">
+          <h3>Nội Dung Phim</h3>
+          <p>
+            Không ngoa khi nói rằng, Joker là nhân vật phản diện nổi tiếng hàng
+            đầu thế giới. Kẻ thù của Batman là cái tên mang tính biểu tượng từ
+            truyện tranh đến màn ảnh rộng. Năm 2019, Todd Phillips và Joaquin
+            Phoenix mang đến cho khán giả một Joker cực kì khác biệt, chưa từng
+            có trong lịch sử. <br />
+            <br />
+            Lần này, Joker 2 trở lại, mang đến cho khán giả bộ đôi diễn viên
+            trong mơ – Joaquin Phoenix tiếp tục trở thành Arthur Fleck còn vai
+            diễn Harley Quinn thuộc về Lady Gaga. Chưa tham gia nhiều phim, nữ
+            ca sĩ huyền thoại vẫn nhận được sự tin tưởng từ công chúng bởi diễn
+            xuất chất lượng trong A Star Is Born (2018), House Of Gucci
+            (2021).<br />
+            <br />
+            Folie À Deux là căn bệnh rối loạn tâm thần chia sẻ. Chứng bệnh khiến
+            cả hai người cùng tiếp xúc với nguồn năng lực tiêu cực trong tâm
+            trí. Dường như, ở Joker 2, gã hề đã “lây lan” căn bệnh đến Harley
+            Quinn, khiến cả hai người họ “điên có đôi”. Tên phim đã khắc họa
+            được một phần nội dung, xoáy sâu vào mối quan hệ độc hại giữa Joker
+            và Harley Quinn.<br />
+          </p>
+        </div>
+
+        <div class="movie-extra">
+          <p><b>Ngày chiếu:</b> 17/10/2024</p>
+        </div>
+
+        <div class="actions">
+          <!-- chỉ cần đổi data-link -->
+          <button
+            class="trailer-btn"
+            data-link="https://www.youtube.com/embed/_OKAwz2MsJs"
+          >
+            🎞️ Xem trailer
+          </button>
+        </div>
+        <!-- Trailer -->
+        <div class="trailer-popup" id="trailerPopup">
+          <div class="trailer-content">
+            <span class="close-btn" onclick="closeTrailer()">&times;</span>
+            <iframe
+              id="trailerFrame"
+              width="1000"
+              height="562.5"
+              src=""
+              title="Joker 2 Trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Lịch chiếu -->
+        <div class="schedule">
+          <h3>Lịch chiếu Joker: Điên Có Đôi</h3>
+
+          <!-- Ngày -->
+          <div class="date-selector" id="dateSelector">
+            <button class="date active">
+              <span class="day">19/10</span><br />
+              <span class="label">Hôm nay</span>
+            </button>
+            <button class="date">
+              <span class="day">20/10</span><br />
+              <span>Thứ Hai</span>
+            </button>
+            <button class="date">
+              <span class="day">21/10</span><br />
+              <span>Thứ Ba</span>
+            </button>
+            <button class="date">
+              <span class="day">22/10</span><br /><span>Thứ Tư</span>
+            </button>
+            <button class="date">
+              <span class="day">23/10</span><br /><span>Thứ Năm</span>
+            </button>
+            <button class="date">
+              <span class="day">24/10</span><br /><span>Thứ Sáu</span>
+            </button>
+            <button class="date">
+              <span class="day">25/10</span><br /><span>Thứ Bảy</span>
+            </button>
+            <button class="date">
+              <span class="day">26/10</span><br /><span>Chủ Nhật</span>
+            </button>
+          </div>
+
+          <!-- Suất chiếu -->
+          <div class="showtime" id="showtimeSection">
+            <h4>2D Phụ đề</h4>
+            <div class="time-slots" id="timeSlots">
+              <button>11:15 ~ 13:33</button>
+              <button>13:30 ~ 15:48</button>
+              <button>14:30 ~ 16:48</button>
+              <button>15:45 ~ 18:03</button>
+              <button>18:00 ~ 20:18</button>
+              <button>19:15 ~ 21:33</button>
+              <button>20:15 ~ 22:33</button>
+              <button>21:30 ~ 23:48</button>
+              <button>22:30 ~ 00:48</button>
+              <button>23:15 ~ 01:33</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/js/script.js"></script>
+</html>

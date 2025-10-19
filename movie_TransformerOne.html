@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformers One</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Ảnh nền -->
+    <div class="background">
+      <img
+        src="./assets/img/transformersone_landscape.jpg"
+        alt="The Wild Robot Landscape"
+      />
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="movie-container">
+      <div class="poster">
+        <img src="./assets/img/transformersone.jpg" alt="Transformers One" />
+      </div>
+
+      <div class="movie-info">
+        <div class="age-tag" style="background-color: #ddbc3f">13+</div>
+        <h1 class="movie-title">Transformers One</h1>
+        <p class="movie-meta">2024 • 104 phút</p>
+
+        <div class="rating">
+          <span class="icon">🍿</span>
+          <span>4.8/5 từ 392 đánh giá</span>
+        </div>
+
+        <p class="tagline">
+          Quốc gia: Mỹ <br />
+          Nhà sản xuất: Paramount Pictures <br />
+          Thể loại: Hoạt hình, hành động, phiêu lưu <br />
+          Đạo diễn: Josh Cooley <br />
+          Diễn viên: Chris Hemsworth, Scarlett Johanson, Jon Hamm
+        </p>
+
+        <div class="movie-desc">
+          <h3>Nội Dung Phim</h3>
+          <p>
+            Transformers Một là bộ phim hoạt hình Transformers đầu tiên sau 40
+            năm, và để kỷ niệm 40 năm thương hiệu Transformers, bộ phim là câu
+            chuyện gốc về quá trình Optimus Prime và Megatron từ bạn thành thù.
+            <br />
+            <br />
+            Lấy chủ đề câu chuyện phiêu lưu hài hước tràn ngập tình đồng đội
+            cùng những pha hành động và biến hình cực đã mắt, Transformer One hé
+            lộ câu chuyện gốc được chờ đợi bấy lâu về cách các nhân vật mang
+            tính biểu tượng nhất trong vũ trụ Transformers - Orion Pax và D-16
+            từ anh em chiến đấu trở thành Optimus Prime và Megatron - kẻ thù
+            không đội trời chung. <br />
+            <br />
+            Transformers One có sự tham gia của dàn diễn viên lồng tiếng cực
+            chất bao gồm Chris Hemsworth, Brian Tyree Henry, Scarlett Johansson,
+            Keegan-Michael Key, Jon Hamm, Laurence Fishburne và Steve Buscemi.
+            Josh Cooley, cựu họa sĩ và nhà biên kịch Pixar, đạo diễn Toy Story
+            4, sẽ chỉ đạo bộ phim. Phim có Andrew Barrer và Gabriel Ferrari
+            (Ant-Man and the Wasp) chịu trách nhiệm kịch bản. Michael Bay - đạo
+            diễn nhiều phần phim Transformers ăn khách trước đây - là nhà sản
+            xuất bộ phim bên cạnh Lorenzo di Bonaventura, Tom DeSanto, Don
+            Murphy, Mark Vahradian và Aaron Dem.
+          </p>
+        </div>
+
+        <div class="movie-extra">
+          <p><b>Ngày chiếu:</b> 27/09/2024</p>
+        </div>
+
+        <div class="actions">
+          <!-- chỉ cần đổi data-link -->
+          <button
+            class="trailer-btn"
+            data-link="https://www.youtube.com/embed/0rmJXXKDrsM"
+          >
+            🎞️ Xem trailer
+          </button>
+        </div>
+
+        <!-- Popup trailer -->
+        <div class="trailer-popup" id="trailerPopup">
+          <div class="trailer-content">
+            <span class="close-btn">&times;</span>
+            <iframe
+              id="trailerFrame"
+              width="1000"
+              height="562.5"
+              src=""
+              title="The Wild Robot Trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Lịch chiếu -->
+        <div class="schedule">
+          <h3>Lịch chiếu The Wild Robot</h3>
+
+          <!-- Ngày -->
+          <div class="date-selector">
+            <button class="date active">
+              <span class="day">19/10</span><br />
+              <span class="label">Hôm nay</span>
+            </button>
+            <button class="date">
+              <span class="day">20/10</span><br /><span>Thứ Hai</span>
+            </button>
+            <button class="date">
+              <span class="day">21/10</span><br /><span>Thứ Ba</span>
+            </button>
+            <button class="date">
+              <span class="day">22/10</span><br /><span>Thứ Tư</span>
+            </button>
+            <button class="date">
+              <span class="day">23/10</span><br /><span>Thứ Năm</span>
+            </button>
+            <button class="date">
+              <span class="day">24/10</span><br /><span>Thứ Sáu</span>
+            </button>
+            <button class="date">
+              <span class="day">25/10</span><br /><span>Thứ Bảy</span>
+            </button>
+            <button class="date">
+              <span class="day">26/10</span><br /><span>Chủ Nhật</span>
+            </button>
+          </div>
+
+          <!-- Suất chiếu -->
+          <div class="showtime">
+            <h4>2D Phụ đề</h4>
+            <div class="time-slots">
+              <button>11:15 ~ 13:33</button>
+              <button>13:30 ~ 15:48</button>
+              <button>14:30 ~ 16:48</button>
+              <button>15:45 ~ 18:03</button>
+              <button>18:00 ~ 20:18</button>
+              <button>19:15 ~ 21:33</button>
+              <button>20:15 ~ 22:33</button>
+              <button>21:30 ~ 23:48</button>
+              <button>22:30 ~ 00:48</button>
+              <button>23:15 ~ 01:33</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Dùng script chung -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

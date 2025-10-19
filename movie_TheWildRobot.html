@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wild Robot</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Ảnh nền -->
+    <div class="background">
+      <img
+        src="./assets/img/thewildrobot_landscape.webp"
+        alt="The Wild Robot Landscape"
+      />
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="movie-container">
+      <div class="poster">
+        <img src="./assets/img/thewildrobot.jpg" alt="The Wild Robot" />
+      </div>
+
+      <div class="movie-info">
+        <div class="age-tag" style="background-color: #579b41">P</div>
+        <h1 class="movie-title">Robot Hoang Dã</h1>
+        <p class="movie-meta">2024 • 102 phút</p>
+
+        <div class="rating">
+          <span class="icon">🍿</span>
+          <span>4.7/5 từ 356 đánh giá</span>
+        </div>
+
+        <p class="tagline">
+          Quốc gia: Mỹ <br />
+          Nhà sản xuất: Dreamworks, Universal Pictures <br />
+          Thể loại: Hoạt hình <br />
+          Đạo diễn: Chris Sanders <br />
+          Diễn viên: Lupita Nyong'o, Pedro Pascal, Catherine O'hara
+        </p>
+
+        <div class="movie-desc">
+          <h3>Nội Dung Phim</h3>
+          <p>
+            Cuộc phiêu lưu hoành tráng theo chân hành trình của một robot — đơn
+            vị ROZZUM 7134, gọi tắt là Roz. Roz vô tình dạt vào hoang đảo sau
+            một sự cố và nơi đây trở thành địa điểm sống mới của cô. Tại đây,
+            Roz kết thân và nhận nuôi một chú ngỗng con, đặt tên là Brightbill.
+            Roz và Brightbill dần dần thân thiết với các bạn thú trên đảo, song
+            sau đó phải chống chọi, bảo vệ “nhà mới” trước sự xâm lăng của nhà
+            máy từng sản xuất ra Roz.
+          </p>
+        </div>
+
+        <div class="movie-extra">
+          <p><b>Ngày chiếu:</b> 11/10/2024</p>
+        </div>
+
+        <div class="actions">
+          <!-- chỉ cần đổi data-link -->
+          <button
+            class="trailer-btn"
+            data-link="https://www.youtube.com/embed/67vbA5ZJdKQ"
+          >
+            🎞️ Xem trailer
+          </button>
+        </div>
+
+        <!-- Popup trailer -->
+        <div class="trailer-popup" id="trailerPopup">
+          <div class="trailer-content">
+            <span class="close-btn">&times;</span>
+            <iframe
+              id="trailerFrame"
+              width="1000"
+              height="562.5"
+              src=""
+              title="The Wild Robot Trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Lịch chiếu -->
+        <div class="schedule">
+          <h3>Lịch chiếu The Wild Robot</h3>
+
+          <!-- Ngày -->
+          <div class="date-selector">
+            <button class="date active">
+              <span class="day">19/10</span><br />
+              <span class="label">Hôm nay</span>
+            </button>
+            <button class="date">
+              <span class="day">20/10</span><br /><span>Thứ Hai</span>
+            </button>
+            <button class="date">
+              <span class="day">21/10</span><br /><span>Thứ Ba</span>
+            </button>
+            <button class="date">
+              <span class="day">22/10</span><br /><span>Thứ Tư</span>
+            </button>
+            <button class="date">
+              <span class="day">23/10</span><br /><span>Thứ Năm</span>
+            </button>
+            <button class="date">
+              <span class="day">24/10</span><br /><span>Thứ Sáu</span>
+            </button>
+            <button class="date">
+              <span class="day">25/10</span><br /><span>Thứ Bảy</span>
+            </button>
+            <button class="date">
+              <span class="day">26/10</span><br /><span>Chủ Nhật</span>
+            </button>
+          </div>
+
+          <!-- Suất chiếu -->
+          <div class="showtime">
+            <h4>2D Phụ đề</h4>
+            <div class="time-slots">
+              <button>11:15 ~ 13:33</button>
+              <button>13:30 ~ 15:48</button>
+              <button>14:30 ~ 16:48</button>
+              <button>15:45 ~ 18:03</button>
+              <button>18:00 ~ 20:18</button>
+              <button>19:15 ~ 21:33</button>
+              <button>20:15 ~ 22:33</button>
+              <button>21:30 ~ 23:48</button>
+              <button>22:30 ~ 00:48</button>
+              <button>23:15 ~ 01:33</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <!-- Dùng script chung -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

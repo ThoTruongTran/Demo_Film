@@ -1,0 +1,284 @@
+/* Reset & font cơ bản */
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ảnh nền chính */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px) brightness(0.4);
+  transform: scale(1.1);
+}
+
+/* Lớp phủ mờ đen giúp chữ rõ hơn */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: -1;
+}
+
+/* Bố cục chính */
+.movie-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1500px;
+  margin: 100px auto;
+  padding: 0 40px;
+  align-items: flex-start;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Poster */
+.poster img {
+  width: 340px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.poster img:hover {
+  transform: scale(1.03);
+}
+
+/* Thông tin phim */
+.movie-info {
+  flex: 1;
+  max-width: 1800px;
+}
+
+.age-tag {
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.movie-title {
+  font-size: 45px;
+  margin: 5px 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+.movie-meta {
+  color: #bbb;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.rating {
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #ffebee;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.movie-desc h3 {
+  margin-bottom: 5px;
+  font-size: 30px;
+  color: #ffca28;
+}
+
+.movie-desc p {
+  color: #ddd;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.movie-extra p {
+  margin: 10px 0;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Nút */
+.actions {
+  margin-top: 30px;
+}
+
+button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.25s;
+  font-weight: 500;
+}
+
+.trailer-btn {
+  background-color: #e91e63;
+  color: white;
+}
+
+.trailer-btn:hover {
+  background-color: #c2185b;
+}
+
+.review-btn {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+.review-btn:hover {
+  background-color: #fdd835;
+}
+
+/* Popup trailer */
+.trailer-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.trailer-content {
+  position: relative;
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.trailer-content iframe {
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #ff5252;
+}
+
+.schedule {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.schedule h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.date-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.date {
+  background: #f1f1f1;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.2s ease;
+  width: 100px;
+}
+
+.date.active {
+  background: #e91e63;
+  color: #fff;
+}
+
+.date:hover {
+  background: #e91e63;
+  color: #fff;
+}
+
+.showtime h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.time-slots button {
+  background: transparent;
+  border: 2px solid #42a5f5;
+  color: #42a5f5;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slots button:hover {
+  background: #42a5f5;
+  color: #fff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
