@@ -45,8 +45,11 @@
               for (const row of rows) {
                 document.write(`<div class='row'>`);
                 for (let i = 1; i <= 14; i++) {
-                  // Hàng E, F, G là VIP
-                  const isVip = ["E", "F", "G"].includes(row);
+                  // VIP toàn bộ hình chữ nhật D5→H10
+                  const vipRows = ["D", "E", "F", "G", "H"];
+                  const vipCols = [5, 6, 7, 8, 9, 10];
+                  const isVip = vipRows.includes(row) && vipCols.includes(i);
+
                   const cls = isVip ? "seat vip" : "seat normal";
                   document.write(
                     `<div class='${cls}' data-id='${row + i}'>${row + i}</div>`
