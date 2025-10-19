@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Đặt ghế - Joker</title>
+    <link rel="stylesheet" href="./assets/css/seat.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <main class="layout">
+        <!-- Thông tin phim -->
+        <aside class="sidebar">
+          <div class="poster">
+            <img src="./assets/img/joker2.jpg" alt="Joker Poster" />
+          </div>
+          <h2>JOKER: ĐIÊN CÓ ĐÔI</h2>
+          <p>Thể loại: Tâm lý, Hành động</p>
+          <p>Suất chiếu: <strong>19:15 - 21:33</strong></p>
+          <p>Phòng chiếu: <strong>03</strong></p>
+
+          <div class="summary">
+            <p><span id="count">0</span> ghế • <span id="total">0₫</span></p>
+            <button id="payBtn" disabled>Thanh toán</button>
+          </div>
+
+          <div class="legend">
+            <span class="seat normal"></span> Thường (50k)
+            <span class="seat vip"></span> VIP (100k)
+            <span class="seat booked"></span> Đã đặt
+            <span class="seat selected"></span> Đang chọn
+          </div>
+        </aside>
+
+        <!-- Vùng ghế -->
+        <section class="cinema">
+          <div class="screen">
+            <img src="./assets/img/screen.webp" alt="Màn hình chiếu" />
+          </div>
+
+          <div id="seatMap" class="seat-map">
+            <script>
+              const rows = "ABCDEFGHIJK".split("");
+              for (const row of rows) {
+                document.write(`<div class='row'>`);
+                for (let i = 1; i <= 14; i++) {
+                  // Hàng E, F, G là VIP
+                  const isVip = ["E", "F", "G"].includes(row);
+                  const cls = isVip ? "seat vip" : "seat normal";
+                  document.write(
+                    `<div class='${cls}' data-id='${row + i}'>${row + i}</div>`
+                  );
+                }
+                document.write(`</div>`);
+              }
+            </script>
+          </div>
+        </section>
+      </main>
+
+      <!-- Overlay Thanh toán -->
+      <div id="overlay" class="overlay hidden">
+        <div class="modal">
+          <button id="closePay" class="close">&times;</button>
+          <h2>Xác nhận thanh toán</h2>
+
+          <ul id="selectedList" class="seat-list"></ul>
+
+          <div class="total">
+            <span>Tổng cộng:</span> <strong id="payTotal">0₫</strong>
+          </div>
+
+          <div class="qr">
+            <h4>Quét mã để thanh toán</h4>
+            <img id="qrImage" src="./assets/img/qr.png" alt="QR" />
+          </div>
+
+          <button id="confirmPay" class="confirm">Hoàn tất</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/seat.js"></script>
+  </body>
+</html>
