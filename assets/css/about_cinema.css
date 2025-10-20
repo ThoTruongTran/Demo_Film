@@ -1,0 +1,192 @@
+/* --- Cài đặt Toàn cục --- */
+:root {
+  --primary-color: #d90000; /* Màu đỏ điện ảnh cho tiêu đề */
+  --button-bg: #ffe5e9; /* Màu nền nút hồng nhạt */
+  --button-text: #c02a4e; /* Màu chữ nút hồng đậm */
+  --text-dark: #222;
+  --text-light: #f5f5f5;
+  --font-family: "Roboto", sans-serif;
+  --container-width: 1140px;
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-dark: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* --- Phần Hero --- */
+.hero-section {
+  height: 800px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/gt5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Hiệu ứng parallax */
+  color: var(--text-light);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+}
+
+/* --- Dải thông tin chung --- */
+.info-section-strip {
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.info-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* --- Hộp Văn bản & Hình ảnh --- */
+.info-image-placeholder,
+.info-text-box {
+  flex: 1;
+}
+
+.info-image-placeholder img {
+  border-radius: 12px;
+  box-shadow: var(--shadow-dark);
+  display: block;
+}
+
+.info-text-box h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.info-text-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* --- Bố cục Đảo ngược --- */
+.reverse-layout .info-container {
+  flex-direction: row-reverse;
+}
+
+/* --- Nút Bấm --- */
+.primary-button {
+  display: inline-block;
+  background-color: var(--button-bg); /* Đổi màu nền nút */
+  color: var(--button-text); /* Đổi màu chữ nút */
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--shadow-light);
+}
+
+.primary-button:hover {
+  background-color: #ffd8de; /* Màu hồng sáng hơn khi hover */
+  transform: translateY(-3px);
+}
+
+/* --- Tùy chỉnh Màu nền --- */
+.light-pink-bg {
+  background-color: #fdf2f2;
+}
+
+.mint-bg {
+  background-color: #f0f9f8;
+}
+
+.orange-bg {
+  background-color: #fff8f0;
+}
+
+/* Đây là lớp nền sáng mới cho section cuối */
+.light-lavender-bg {
+  background-color: #f5f4fa;
+}
+
+/* --- Chân trang --- */
+.main-footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive cho Di động --- */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .info-section-strip {
+    padding: 50px 20px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .reverse-layout .info-container {
+    flex-direction: column-reverse;
+  }
+
+  .info-text-box {
+    text-align: center;
+  }
+
+  .info-text-box h2 {
+    font-size: 2rem;
+  }
+
+  .info-text-box p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+}
